@@ -1,17 +1,22 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# format = """
+# $character\
+# $directory\
+# [⚡️](fg:#cdd6f4)\
+# $git_branch\
+# $nodejs\
+# $python\
+# $conda\
+# $golang\
+# $rust\
+# [❯](fg:#a6e3a1)
+# """
 format = """
-$character\
 $directory\
-[⚡️](fg:#ffffff)\
 $git_branch\
-$nodejs\
-$python\
-$conda\
-$golang\
-$rust\
-[❯](fg:#9ECE6A)
+[❯](fg:#93E2D5) 
 """
 
 # Inserts a blank line between shell prompts
@@ -19,20 +24,20 @@ add_newline = true
 
 # Replace the '❯' symbol in the prompt with '➜'
 [character] # The name of the module we are configuring is 'character'
-success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+success_symbol = '[❯](#93E2D5)'
 
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
 
 [directory]
-style = "fg:#BB9AF7"
+style = "fg:#CBA6F7"
 truncation_length = 1
 
 [git_branch]
 symbol = ""
-style = "fg:#f7768e"
-format = '[\($symbol $branch\)]($style)'
+style = "fg:#eba0ac"
+format = '[\($symbol $branch\) ]($style)'
 
 [nodejs]
 symbol = "󰎙"

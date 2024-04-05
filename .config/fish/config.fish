@@ -26,6 +26,9 @@ if status is-interactive
     abbr -a pn pnpm
     abbr -a px pnpx
 
+    abbr -a e eza
+    abbr -a ea eza -la
+
 end
 
 export VIRTUAL_ENV_DISABLE_PROMPT=1=1

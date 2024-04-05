@@ -1,12 +1,5 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
-include colors.conf
-#include theme.conf
-
-# map ctrl+cmd+s kitten session_switcher.py
-# map ctrl+cmd+$ kitten session_renamer.py
-# startup_session session
-#
  map ctrl+cmd+i     set_tab_title
 #
 # tab_bar_style custom
@@ -17,7 +10,6 @@ include colors.conf
 # allow_remote_control yes
 
 font_size 13.0
-
 
 
 #: Fonts {{{
@@ -992,7 +984,7 @@ symbol_map U+23FB-U+23FE,U+2665,U+26A1,U+2B58,U+E000-U+E00A,U+E0A0-U+E0A3,U+E0B0
 #: The second number is the margin between the tab bar and the
 #: contents of the current tab.
 
-# tab_bar_style fade
+tab_bar_style powerline
 
 #: The tab bar style, can be one of:
 
@@ -1050,7 +1042,7 @@ symbol_map U+23FB-U+23FE,U+2665,U+26A1,U+2B58,U+E000-U+E00A,U+E0A0-U+E0A3,U+E0B0
 #: The separator between tabs in the tab bar when using separator as
 #: the tab_bar_style.
 
-# tab_powerline_style angled
+tab_powerline_style round
 
 #: The powerline separator style between tabs in the tab bar when
 #: using powerline as the tab_bar_style, can be one of: angled,
@@ -2485,3 +2477,11 @@ symbol_map U+23FB-U+23FE,U+2665,U+26A1,U+2B58,U+E000-U+E00A,U+E0A0-U+E0A3,U+E0B0
 #: }}}
 
 #: }}}
+
+
+
+
+# BEGIN_KITTY_THEME
+# Catppuccin-Mocha
+include current-theme.conf
+# END_KITTY_THEME
