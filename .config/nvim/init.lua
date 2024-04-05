@@ -91,7 +91,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -101,7 +101,6 @@ vim.g.have_nerd_font = false
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
---  Experiment for yourself to see if you like it!
 vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
@@ -756,6 +755,43 @@ require('lazy').setup({
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
     end,
+  },
+  {
+    'nvim-lualine/lualine.nvim',
+    opts = {
+      options = {
+        theme = 'catppuccin',
+        component_separators = ' ',
+        section_separators = { left = '', right = '' },
+      },
+      sections = {
+        lualine_a = { 'mode' },
+        lualine_b = { 'branch' },
+
+        lualine_c = {
+          {
+            'diagnostics',
+            symbols = {
+              error = '󰀩 ',
+              warn = ' ',
+              info = ' ',
+              hint = '󱠂 ',
+            },
+          },
+        },
+        lualine_x = {
+          {},
+        },
+        lualine_y = {
+          { 'filetype', icon_only = true, separator = '', padding = { left = 1, right = 0 } },
+          { 'filename', separator = '', path = 1, padding = { left = 1, right = 1 } },
+        },
+        lualine_z = {
+          { 'progress', separator = ' ', padding = { left = 1, right = 0 } },
+          { 'location', padding = { left = 0, right = 1 } },
+        },
+      },
+    },
   },
 
   -- Highlight todo, notes, etc in comments
