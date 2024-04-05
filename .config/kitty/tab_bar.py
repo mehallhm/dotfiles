@@ -123,7 +123,7 @@ def _draw_element(
         # Left separator
         components.append((LEFT_SEP, idx_bg, colors["bg"]))
     else:
-        components.append((LEFT_CURVE_SEP, icon_col, icon_bg))
+        components.append((LEFT_CURVE_SEP, icon_col, colors["bg"]))
 
     if not icon:
         icon_padding = PADDING if title != "" else ""
@@ -364,8 +364,8 @@ def draw_tab(
         elements = list()
         if is_running_pager:
             elements.append({"title": "", "icon": PAGER_ICON, "accented": True})
-        if is_git_repo:
-            elements.append({"title": branch, "icon": BRANCH_ICON, "accented": False})
+        # if is_git_repo:
+        #     elements.append({"title": branch, "icon": BRANCH_ICON, "accented": False})
         elements.append({"title": user, "icon": USER_ICON, "accented": is_ssh})
         # elements.append({"title": host, "icon": HOST_ICON, "accented": is_ssh})
 
