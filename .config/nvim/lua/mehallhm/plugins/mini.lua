@@ -1,9 +1,13 @@
 return {
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
-  -- Use `opts = {}` to force a plugin to be loaded.
-  -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  {
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    lazy = true,
+    opts = {
+      enable_autocmd = false,
+    },
+  },
 
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
@@ -26,8 +30,19 @@ return {
       require('mini.pairs').setup()
       require('mini.bufremove').setup()
       require('mini.files').setup()
+      vim.keymap.set('n', '<leader>f', '<cmd>lua MiniFiles.open()<CR>', { desc = '[F]iles' })
+      vim.keymap.set('n', '<S-l>', '<cmd>bnext<cr>')
+      vim.keymap.set('n', '<S-h>', '<cmd>bprev<cr>')
+
       require('mini.starter').setup()
       require('mini.move').setup()
+      require('mini.comment').setup {
+        options = {
+          custom_commentstring = function()
+            return require('ts_context_commentstring.internal').calculate_commentstring() or vim.bo.commentstring
+          end,
+        },
+      }
 
       require('mini.statusline').setup()
       require('mini.tabline').setup()

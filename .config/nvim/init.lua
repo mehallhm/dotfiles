@@ -135,10 +135,6 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
-vim.keymap.set('n', '<leader>f', '<cmd>lua MiniFiles.open()<CR>', { desc = '[F]iles' })
-vim.keymap.set('n', ']b', '<cmd>bnext<cr>')
-vim.keymap.set('n', '[b', '<cmd>bprev<cr>')
-
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -163,20 +159,6 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup {
-
-  { -- You can easily change to a different colorscheme.
-    -- Change the name of the colorscheme plugin below, and then
-    -- change the command in the config to whatever the name of that colorscheme is.
-    --
-    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    'catppuccin/nvim',
-    enabled = false,
-    priority = 1000, -- Make sure to load this before all the other start plugins.
-    config = function()
-      vim.cmd.colorscheme 'catppuccin-mocha'
-    end,
-  },
-
   {
     'rebelot/kanagawa.nvim',
     enabled = true,
@@ -187,11 +169,8 @@ require('lazy').setup {
   },
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
 
-  --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
   { import = 'mehallhm.plugins' },
 }
-
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
