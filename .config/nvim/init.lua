@@ -135,7 +135,9 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
-vim.keymap.set('n', '<leader>ff', '<cmd>lua MiniFiles.open()<CR>')
+vim.keymap.set('n', '<leader>f', '<cmd>lua MiniFiles.open()<CR>', { desc = '[F]iles' })
+vim.keymap.set('n', ']b', '<cmd>bnext<cr>')
+vim.keymap.set('n', '[b', '<cmd>bprev<cr>')
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -160,8 +162,6 @@ if not vim.loop.fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
-vim.keymap.set('n', '<space>fb', ':Telescope file_browser path=%:p:h select_buffer=true<CR>')
-
 require('lazy').setup {
 
   { -- You can easily change to a different colorscheme.
@@ -170,9 +170,19 @@ require('lazy').setup {
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     'catppuccin/nvim',
+    enabled = false,
     priority = 1000, -- Make sure to load this before all the other start plugins.
-    init = function()
+    config = function()
       vim.cmd.colorscheme 'catppuccin-mocha'
+    end,
+  },
+
+  {
+    'rebelot/kanagawa.nvim',
+    enabled = true,
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme 'kanagawa'
     end,
   },
   -- require 'kickstart.plugins.debug',

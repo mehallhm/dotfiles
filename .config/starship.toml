@@ -16,7 +16,7 @@
 format = """
 $directory\
 $git_branch\
-[❯](fg:#93E2D5) 
+[❯](fg:#76946A) 
 """
 
 # Inserts a blank line between shell prompts
@@ -24,19 +24,19 @@ add_newline = true
 
 # Replace the '❯' symbol in the prompt with '➜'
 [character] # The name of the module we are configuring is 'character'
-success_symbol = '[❯](#93E2D5)'
+success_symbol = '[❯](#76946A)'
 
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
 
 [directory]
-style = "fg:#CBA6F7"
+style = "fg:#957FB8"
 truncation_length = 1
 
 [git_branch]
 symbol = ""
-style = "fg:#eba0ac"
+style = "fg:#C0A36E"
 format = '[\($symbol $branch\) ]($style)'
 
 [nodejs]

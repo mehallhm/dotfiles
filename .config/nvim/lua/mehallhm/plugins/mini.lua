@@ -23,14 +23,14 @@ return {
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
 
-      -- ... and there is more!
-      --  Check out: https://github.com/echasnovski/mini.nvim
-
       require('mini.pairs').setup()
       require('mini.bufremove').setup()
-      -- require('mini.statusline').setup()
-      -- require('mini.tabline').setup()
       require('mini.files').setup()
+      require('mini.starter').setup()
+      require('mini.move').setup()
+
+      require('mini.statusline').setup()
+      require('mini.tabline').setup()
     end,
   },
 }

@@ -3,12 +3,12 @@ return { -- Autoformat
   lazy = false,
   keys = {
     {
-      '<leader>f',
+      '<leader>m',
       function()
         require('conform').format { async = true, lsp_fallback = true }
       end,
       mode = '',
-      desc = '[F]ormat buffer',
+      desc = 'For[M]at buffer',
     },
   },
   opts = {
@@ -25,6 +25,22 @@ return { -- Autoformat
     end,
     formatters_by_ft = {
       lua = { 'stylua' },
+      javascript = { 'prettier' },
+      javascriptreact = { 'prettier' },
+      typescript = { 'prettier' },
+      typescriptreact = { 'prettier' },
+      vue = { 'prettier' },
+      css = { 'prettier' },
+      scss = { 'prettier' },
+      less = { 'prettier' },
+      html = { 'prettier' },
+      json = { 'prettier' },
+      jsonc = { 'prettier' },
+      yaml = { 'prettier' },
+      markdown = { 'prettier' },
+      ['markdown.mdx'] = { 'prettier' },
+      graphql = { 'prettier' },
+      handlebars = { 'prettier' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
