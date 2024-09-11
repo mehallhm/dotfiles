@@ -67,8 +67,6 @@ if status is-interactive
 
 end
 
-export VIRTUAL_ENV_DISABLE_PROMPT=1=1
-
 # pnpm
 set -gx PNPM_HOME /Users/micha/Library/pnpm
 if not string match -q -- $PNPM_HOME $PATH
@@ -77,18 +75,6 @@ end
 # pnpm end
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-if test -f /opt/homebrew/Caskroom/miniconda/base/bin/conda
-    eval /opt/homebrew/Caskroom/miniconda/base/bin/conda "shell.fish" hook $argv | source
-else
-    if test -f "/opt/homebrew/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
-        source "/opt/homebrew/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
-    else
-        set -x PATH /opt/homebrew/Caskroom/miniconda/base/bin $PATH
-    end
-end
-# <<< conda initialize <<<
 
 #!/bin/fish
 

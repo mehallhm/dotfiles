@@ -147,6 +147,24 @@ return {
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
         --
+        --
+
+        pyright = {
+          settings = {
+            pyright = {
+              disableOrganizeImport = true,
+            },
+            python = {
+              analysis = {
+                -- typeCheckingMode = 'off',
+                useLibraryCodeForTypes = true,
+                autoImportCompletions = true,
+                autoSearchPaths = true,
+                diagnosticMode = 'workspace',
+              },
+            },
+          },
+        },
 
         lua_ls = {
           -- cmd = {...},

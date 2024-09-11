@@ -161,10 +161,10 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup {
   {
     'rebelot/kanagawa.nvim',
-    enabled = true,
     priority = 1000,
     config = function()
       vim.cmd.colorscheme 'kanagawa'
+      -- vim.cmd.colorscheme 'kanagawa-lotus'
     end,
   },
   -- require 'kickstart.plugins.debug',

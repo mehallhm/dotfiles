@@ -49,6 +49,13 @@ return { -- Autocompletion
       },
       completion = { completeopt = 'menu,menuone,noinsert' },
 
+      enabled = function()
+        if require('cmp.config.context').in_treesitter_capture 'comment' == true or require('cmp.config.context').in_syntax_group 'Comment' then
+          return false
+        else
+          return true
+        end
+      end,
       -- For an understanding of why these mappings were
       -- chosen, you will need to read `:help ins-completion`
       --

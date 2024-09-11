@@ -41,6 +41,7 @@ return { -- Autoformat
       ['markdown.mdx'] = { 'prettier' },
       graphql = { 'prettier' },
       handlebars = { 'prettier' },
+      python = { 'ruff_format', 'ruff_fix' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
