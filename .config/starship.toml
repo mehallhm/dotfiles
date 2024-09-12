@@ -16,6 +16,7 @@
 format = """
 $directory\
 $git_branch\
+$python\
 [❯](fg:#76946A) 
 """
 
@@ -45,7 +46,7 @@ format = ' [$symbol ($version )]($style)'
 
 [python]
 symbol = "\ue235"
-format = ' [${symbol} ${pyenv_prefix}(${version} )(\($virtualenv\))]($style)'
+format = '[(${symbol} $virtualenv )]($style)'
 
 [conda]
 symbol = "\ue235"
