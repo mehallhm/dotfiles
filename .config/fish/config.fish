@@ -34,12 +34,18 @@ set -g fish_pager_color_prefix $cyan
 set -g fish_pager_color_completion $foreground
 set -g fish_pager_color_description $comment
 
-
 # Homebrew
 fish_add_path /opt/homebrew/bin
 
 # Cargo
 fish_add_path ~/.cargo/bin
+
+# Nim
+fish_add_path ~/.nimble/bin
+
+# Go
+set -g GOPATH $HOME/.go
+fish_add_path $GOPATH/bin
 
 # Zoxide
 zoxide init fish | source
