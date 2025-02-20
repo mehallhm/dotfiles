@@ -100,7 +100,7 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.inccommand = 'split'
 
 -- Show which line your cursor is on
-vim.opt.cursorline = true
+-- vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
@@ -165,6 +165,30 @@ require('lazy').setup {
     config = function()
       vim.cmd.colorscheme 'kanagawa'
       -- vim.cmd.colorscheme 'kanagawa-lotus'
+
+      vim.cmd.highlight 'LineNr guibg=none'
+      vim.cmd.highlight 'CursorLineNr guibg=none'
+      vim.cmd.highlight 'SignColumn guibg=none'
+
+      -- GitSigns background
+      vim.cmd.highlight 'GitSignsAdd guibg=none'
+      vim.cmd.highlight 'GitSignsChange guibg=none'
+      vim.cmd.highlight 'GitSignsDelete guibg=none'
+
+      -- Trouble background
+      vim.cmd.highlight 'TroubleSignHint guibg=none'
+      vim.cmd.highlight 'TroubleSignError guibg=none'
+      vim.cmd.highlight 'TroubleSignWarning guibg=none'
+      vim.cmd.highlight 'TroubleSignOther guibg=none'
+      vim.cmd.highlight 'TroubleSignInformation guibg=none'
+      vim.cmd.highlight 'TroubleCount guibg=none'
+
+      -- Diagnostic background
+      vim.cmd.highlight 'DiagnosticSignOk guibg=none'
+      vim.cmd.highlight 'DiagnosticSignHint guibg=none'
+      vim.cmd.highlight 'DiagnosticSignInfo guibg=none'
+      vim.cmd.highlight 'DiagnosticSignWarning guibg=none'
+      vim.cmd.highlight 'DiagnosticSignError guibg=none'
     end,
   },
   -- require 'kickstart.plugins.debug',
