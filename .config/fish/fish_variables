@@ -2,7 +2,7 @@
 # VERSION: 3.0
 SETUVAR --export SSH_AGENT_PID:1179
 SETUVAR --export SSH_AUTH_SOCK:/var/folders/jk/vqmr1l1d1dnflmyh1qdjmhk40000gn/T//ssh\x2dnXxaeDOEwMA4/agent\x2e1177
-SETUVAR __fish_initialized:3400
+SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:6c7086
 SETUVAR fish_color_cancel:f38ba8
 SETUVAR fish_color_command:89b4fa
@@ -44,4 +44,4 @@ SETUVAR fish_pager_color_selected_background:\x1d
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/Users/micha/\x2ego/bin\x1e/Users/micha/\x2enimble/bin\x1e/opt/homebrew/opt/openjdk/bin\x1e/opt/local/bin\x1e/Users/micha/\x2ecargo/bin\x1e/opt/homebrew/bin\x1e/opt/homebrew/opt/fzf/bin
+SETUVAR fish_user_paths:/opt/homebrew/sbin\x1e/Users/micha/\x2ego/bin\x1e/Users/micha/\x2enimble/bin\x1e/opt/homebrew/opt/openjdk/bin\x1e/opt/local/bin\x1e/Users/micha/\x2ecargo/bin\x1e/opt/homebrew/bin\x1e/opt/homebrew/opt/fzf/bin

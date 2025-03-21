@@ -1,0 +1,15 @@
+theme = Kanagawa Wave
+
+# custom-shader = ./shaders/retro-terminal.glsl
+# custom-shader = ./shaders/bettercrt.glsl
+# custom-shader = ./shaders/dither.glsl
+# custom-shader = ./shaders/glitchy.glsl
+# custom-shader = ./shaders/starfield.glsl
+
+shell-integration = fish
+
+background-opacity = 0.8
+background-blur = true
+
+macos-titlebar-style = transparent
+macos-icon = retro

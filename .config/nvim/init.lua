@@ -188,6 +188,7 @@ require('lazy').setup {
       vim.cmd.highlight 'DiagnosticSignHint guibg=none'
       vim.cmd.highlight 'DiagnosticSignInfo guibg=none'
       vim.cmd.highlight 'DiagnosticSignWarning guibg=none'
+      vim.cmd.highlight 'DiagnosticSignWarn guibg=none'
       vim.cmd.highlight 'DiagnosticSignError guibg=none'
     end,
   },
