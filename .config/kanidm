@@ -1,0 +1,2 @@
+uri = "https://idm.mehallhm.com"
+ca_path = "/Users/.config/kanidm_ca.pem"

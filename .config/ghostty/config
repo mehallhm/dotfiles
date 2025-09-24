@@ -4,6 +4,7 @@ theme = Kanagawa Wave
 # custom-shader = ./shaders/bettercrt.glsl
 # custom-shader = ./shaders/dither.glsl
 # custom-shader = ./shaders/glitchy.glsl
+# custom-shader = ./shaders/bloom.glsl
 # custom-shader = ./shaders/starfield.glsl
 
 shell-integration = fish
